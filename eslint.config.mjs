@@ -157,6 +157,7 @@ export default defineConfig(
   pluginReact.configs.flat['jsx-runtime'],
   pluginTypescript.configs.recommended,
   pluginImport.flatConfigs.recommended,
+  // pluginReactHooks.configs.flat.recommended,
   {
     plugins: {
       actual: pluginActual,
@@ -451,7 +452,7 @@ export default defineConfig(
       'react-hooks/exhaustive-deps': [
         'warn',
         {
-          additionalHooks: '(useQuery)',
+          additionalHooks: '(^useQuery$)',
         },
       ],
 
